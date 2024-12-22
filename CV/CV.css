@@ -1,0 +1,339 @@
+body {
+    background-image: url('Images/zig-zag.png');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    background-color: #000000;
+    padding-top: 20px;
+    box-shadow: 5px 0 15px rgba(246, 246, 246, 0.5);
+    z-index: 1;
+}
+
+.Navbar a {
+    display: block;
+    color: #ffffff;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.Navbar a:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.Logo_img img {
+    height: 30px;
+    position: fixed;
+    margin-left: 67px;
+    bottom: 1px;
+}
+
+.Bitmoji {
+    width: 180px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.Bitmoji:hover {
+    box-shadow: 0 10px 20px rgb(255, 255, 255);
+}
+
+.Bitmoji:active{
+    box-shadow: none;
+    border: 2px solid white;
+}
+
+.Profiel-Items {
+    color: #D1D1D1;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+main {
+    margin-left: 220px;
+    padding: 20px;
+    color: #3C3C3C;
+}
+
+section#CV, section#Skills, section#Talen, section#Werkervaring {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    max-width: 1200px;
+    margin: 20px auto;
+    transition: transform 0.3s;
+    color: white;
+}
+
+section#CV:hover, section#Skills:hover, section#Talen:hover, section#Werkervaring:hover {
+    transform: scale(1.02);
+}
+
+section#CV h2, section#CV h3, section#Skills h3, section#Talen h3, section#Werkervaring h3 {
+    color: #ffffff;
+    border-bottom: 2px solid #3C3C3C;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section#CV p, section#Skills p, section#Talen p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+section#Werkervaring p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.Skill-Container, .Language-Container, .Experience-Container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table.Taal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+
+.Taal-table th, .Taal-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.Taal-table th {
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.Taal-table td {
+    background-color: #f9f9f9;
+    font-size: 16px;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.Taal-table tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+.Taal-table tr:nth-child(odd) td {
+    background-color: #c4c4c4;
+}
+
+.Taal-table tr:hover td {
+    background-color: #e0e0e0;
+}
+
+.Laadbar {
+    flex: 1 1 30%;
+    margin: 10px;
+    background-color: #D1D1D1;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.Skill-Level {
+    background-color: #4caf50;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.Ervaring {
+    flex: 1;
+    margin: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.Ervaring h4 {
+    margin: 0;
+    color: #000000;
+}
+
+.Ervaring p {
+    margin: 5px 0 0;
+    color: #333;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    left: 80px;
+}
+
+.Footer-Container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.Footer-Left, .Footer-Center, .Footer-Right {
+    flex: 1;
+    text-align: center;
+}
+
+.Footer-Left {
+    text-align: left;
+}
+
+.Footer-Right {
+    text-align: right;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+section#Werkervaring ul {
+    list-style: none;
+}
+
+@media (max-width: 480px) {
+    .Taal-table th, .Taal-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+
+    #Talen {
+        display: none;
+    }
+
+    #Languages-mobile {
+        display: block;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .language-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .language-item {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .language-name {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 10px;
+        background-color: #e0e0e0;
+        border-radius: 5px;
+        position: relative;
+    }
+
+
+}
+
+
+@media (min-width: 481px) {
+    #Languages-mobile {
+        display: none;
+    }
+
+    #Talen {
+        display: block;
+    }
+
+    .Navbar {
+        width: 230px;
+        flex-direction: column;
+        position: fixed;
+    }
+
+    .Navbar a {
+        font-size: 18px;
+    }
+
+    main {
+        margin-left: 220px;
+    }
+
+    .Skill-Container, .Language-Container, .Experience-Container {
+        justify-content: space-between;
+    }
+
+    .Laadbar {
+        width: 50%;
+        margin: 10px;
+    }
+
+    .Skill-Container.Laadbar {
+        width: 50%;
+    }
+
+    footer {
+        height: 40px;
+    }
+}
