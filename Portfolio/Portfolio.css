@@ -1,0 +1,603 @@
+body {
+    background-image: url("../Images/zig-zag.png");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: #4caf50;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, lightgreen, darkgreen);
+    z-index: -1;
+    transition: opacity;
+    opacity: 0;
+    transform: scale(0.9);
+    border-radius: 5px;
+}
+
+a:hover {
+    color: white;
+}
+
+a:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.Navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    background-color: #000000;
+    padding-top: 20px;
+    box-shadow: 5px 0 15px rgba(246, 246, 246, 0.5);
+    z-index: 1;
+    top: 0;
+    margin: 0;
+}
+
+.Navbar a {
+    display: block;
+    color: #ffffff;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.Navbar a:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.Logo_img img {
+    height: 30px;
+    position: fixed;
+    margin-left: 67px;
+    bottom: 1px;
+}
+
+.Bitmoji {
+    width: 180px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.Bitmoji:hover {
+    box-shadow: 0 10px 20px rgb(255, 255, 255);
+}
+
+.Bitmoji:active {
+    box-shadow: none;
+    border: 2px solid white;
+}
+
+.Profiel-Items {
+    color: #D1D1D1;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    left: 80px;
+}
+
+.Footer-Container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.Footer-Left, .Footer-Right {
+    flex: 1;
+    text-align: center;
+}
+
+.Footer-Left {
+    text-align: left;
+}
+
+.Footer-Right {
+    text-align: right;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#content {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+
+.centrale_foto {
+    margin-bottom: 10px;
+}
+
+.centrale_foto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.hoek_container {
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    width: 20%;
+    text-align: justify;
+    transition: transform 0.3s ease-in-out;
+    margin: 5px;
+}
+
+.hoek_container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+}
+
+.hoek_container:hover {
+    transform: scale(1.05);
+}
+
+.hoek_container a {
+    text-decoration: none;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.hoek_container a:hover {
+    text-decoration: underline;
+}
+
+.hoek_links_boven {
+    top: 150px;
+    left: 350px;
+}
+
+.hoek_rechts_boven {
+    top: 150px;
+    right: 200px;
+}
+
+.hoek_links_onder {
+    bottom: 150px;
+    left: 350px;
+}
+
+.hoek_rechts_onder {
+    bottom: 150px;
+    right: 200px;
+}
+
+#OntWikkeling {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 20px auto;
+    text-align: justify;
+    transition: transform 0.3s ease-in-out;
+    max-width: 800px;
+}
+
+#OntWikkeling:hover {
+    transform: scale(1.05);
+}
+
+#OntWikkeling h1, #OntWikkeling h2, #OntWikkeling h3 {
+    color: #4caf50;
+}
+
+#OntWikkeling p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+#OntWikkeling a {
+    text-decoration: none;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+#OntWikkeling a:hover {
+    text-decoration: underline;
+}
+
+.profiel-sectie {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 20px 0;
+    text-align: justify;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profiel-sectie:hover {
+    transform: scale(1.05);
+}
+
+.profiel-sectie h2, .profiel-sectie h3 {
+    color: #4caf50;
+}
+
+.profiel-sectie p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.profiel-sectie a {
+    text-decoration: none;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.profiel-sectie a:hover {
+    text-decoration: underline;
+}
+
+#Opdrachten {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#Opdrachten:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+
+#Opdrachten h1, #Opdrachten h2, #Opdrachten h3 {
+    color: #4caf50;
+}
+
+#Opdrachten p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: black;
+}
+
+#opdrachtSelect {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.section {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.section h1, .section h2, .section h3 {
+    color: #4caf50;
+}
+
+.section h1 {
+    font-size: 2em;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.section h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.section p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.section p:last-of-type {
+    margin-bottom: 0;
+}
+
+#AIM {
+    text-align: center;
+    padding: 20px;
+}
+
+#AIM h1 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 40px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.column {
+    width: 30%;
+    text-align: center;
+}
+
+.column .letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.column p {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.questions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.question-left, .question-right {
+    width: 45%;
+    text-align: left;
+}
+
+.question-left h2, .question-right h2 {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.question-left p, .question-right p {
+    line-height: 1.6;
+    color: white;
+}
+
+#X-Factor {
+
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#X-Factor:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+
+
+#X-Factor h1, #X-Factor h2, #X-Factor h3 {
+    color: #4caf50;
+    margin-top: 0;
+}
+
+#X-Factor h1 {
+    font-size: 2em;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#X-Factor h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+#X-Factor h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+#X-Factor p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: white;
+}
+
+#X-Factor p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+#logboek {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#logboek table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#logboek th, #logboek td {
+    border: 1px solid #4caf50;
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+#logboek th {
+    background-color: #4caf50;
+    color: black;
+    font-weight: bold;
+}
+
+#logboek tr:nth-child(even) {
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+#logboek tr:hover {
+    background-color: rgba(76, 175, 80, 0.2);
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    .Navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .Navbar a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .hoek_container {
+        width: 90%;
+        margin: 5px 0;
+        position: static;
+    }
+
+    .hoek_container p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    #OntWikkeling, #Opdrachten {
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 10px auto;
+    }
+}
+
+@media (min-width: 481px) {
+    .Navbar {
+        width: 230px;
+        flex-direction: column;
+        position: fixed;
+    }
+
+    .Navbar a {
+        font-size: 18px;
+    }
+
+    main {
+        margin-left: 220px;
+    }
+
+    .hoek_container {
+        width: 20%;
+    }
+
+    .hoek_container p {
+        font-size: 16px;
+        text-align: justify;
+    }
+}
+
+
+

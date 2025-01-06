@@ -1,5 +1,5 @@
 body {
-    background-image: url('Images/zig-zag.png');
+    background-image: url("../Images/bullseye-gradient.svg");
     background-size: cover;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,6 +18,24 @@ body {
     box-shadow: 5px 0 15px rgba(246, 246, 246, 0.5);
     z-index: 1;
 }
+
+.back-button {
+    margin: 50px 0 0 50px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+
 
 .Navbar a {
     display: block;
